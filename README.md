@@ -1,2 +1,12 @@
-# sense-lab
-Entorno multidisciplinar en Python para procesamiento avanzado de señales, monitorización de salud estructural (SHM) y predicción cuantitativa de mercados financieros, con algoritmos optimizados y validados científicamente.
+## Licencia
+
+Este proyecto es **propietario**. Todos los derechos reservados.  
+Para solicitar permisos de uso o colaboración, contacte a
+[javier.santamaria_mex@gmail.com](mailto:javier.santamaria_mex@gmail.com).
+
+**Sin garantía:**  
+Este software se proporciona "tal cual", sin garantía de ningún tipo.
+
+**Limitación de responsabilidad:**  
+El autor no será responsable de ningún daño derivado del uso
+de este software.
