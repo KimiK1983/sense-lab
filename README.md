@@ -6,7 +6,7 @@ Entorno multidisciplinar en Python para:
 2. **Monitorización de Salud Estructural** (Structure Health Monitoring, SHM)
 3. **Predicción Cuantitativa de Mercados** (Quantitative Finance)
 
-Este repositorio organiza **módulos** de descomposición modal (EMD, EEMDAN, ICEEMDAN), filtrado de ruido (BayesShrink, NeighShrink) y herramientas auxiliares, con un enfoque científico y validado.
+Este repositorio organiza **módulos** de descomposición modal (EMD, EEMDAN, ICEEMDAN) y herramientas auxiliares. Los métodos de filtrado de ruido están ahora en repositorios independientes.
 
 ---
 
@@ -27,11 +27,6 @@ sense-lab/
 │  │     ├─ ICEEMDAN.py    ← Implementación CEEMDAN
 │  │     ├─ requirements.txt
 │  │     └─ README.md      ← Documentación de ICEEMDAN
-│  └─ denoising/           ← Métodos de filtrado por umbral
-│     ├─ bayes_shrink/
-│     │  └─ README.md      ← Residuo BayesShrink
-│     └─ neighshrink/      ← Residuo NeighShrink-SURE
-│        └─ README.md      ← Residuo NeighShrink-SURE
 └─ docs/                   ← (Opcional) Documentación adicional
 ```
 
@@ -95,19 +90,8 @@ components = ice(noisy_signal)
 
 ### Filtrado de Ruido (Denoising)
 
-```python
-from signal_processing.denoising.bayes_shrink import bayes_shrink_denoising
-from signal_processing.denoising.neighshrink import neighshrink_sure_denoising
-
-# Señal 1D ruidosa:
-data = noisy_signal
-
-# BayesShrink
-filtered_bayes = bayes_shrink_denoising(data)
-
-# NeighShrink-SURE
-denoised_ns = neighshrink_sure_denoising(data)
-```
+- [BayesShrink denoising](https://github.com/KimiK1983/bayesshrink-denoising)
+- [NeighShrink-SURE denoising](https://github.com/KimiK1983/neighshrink-sure-denoising)
 
 ---
 
@@ -121,7 +105,6 @@ matplotlib
 pandas  # si usas análisis tabular
 EMD-signal>=0.2.4  # PyEMD oficial
 tqdm>=4.60.0
-pywt>=1.4.0
 ```
 
 > **iceemdan/requirements.txt**  (submódulo ICEEMDAN)
@@ -130,22 +113,6 @@ pywt>=1.4.0
 EMD-signal>=0.2.4
 numpy>=1.20.0
 tqdm>=4.60.0
-```
-
-> **bayes\_shrink/requirements.txt**  (opcional)
-
-```
-pywt
-numpy
-matplotlib
-```
-
-> **neighshrink/requirements.txt**  (opcional)
-
-```
-pywt
-numpy
-matplotlib
 ```
 
 ---
@@ -159,7 +126,6 @@ matplotlib
 
   - **EMD-signal (PyEMD)** – Apache License 2.0. Licencia completa en `licenses/APACHE-2.0.txt`.\
     Fuente: [https://github.com/laszukdawid/PyEMD](https://github.com/laszukdawid/PyEMD)
-  - **PyWavelets** – BSD-3-Clause.
   - **tqdm**, **numpy**, **matplotlib** – Licencias MIT/BSD.
 
 ---
